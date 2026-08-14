@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Sahil Suthar - Java and Python developer portfolio. Explore my projects, skills and experience.">
+
+    <title>Sahil Suthar | Developer Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/b222d54b16.js" crossorigin="anonymous">
+    </script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header id="header">
+
+        <div class="container">
+
+            <nav>
+
+                <a href="#header" class="logo-link">
+                    <img src="logoS.png" class="logo" alt="Sahil Suthar Logo">
+                </a>
+
+                <ul id="sidemenu">
+
+                    <li class="mobile-close">
+                        <button class="close-btn" onclick="closemenu()" aria-label="Close menu">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </li>
+
+                    <li>
+                        <a href="#header" onclick="closemenu()">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#about" onclick="closemenu()">About</a>
+                    </li>
+
+                    <li>
+                        <a href="#services" onclick="closemenu()">Skills</a>
+                    </li>
+
+                    <li>
+                        <a href="#portfolio" onclick="closemenu()">Projects</a>
+                    </li>
+
+                    <li>
+                        <a href="#contact" onclick="closemenu()">Contact</a>
+                    </li>
+
+                </ul>
+
+                <button class="menu-btn" onclick="openmenu()" aria-label="Open menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+            </nav>
+
+
+            <div class="header-text">
+
+                <p>JAVA & PYTHON DEVELOPER</p>
+
+                <h1>
+                    Hi, I'm
+                    <span>Sahil Suthar</span>
+                    <br>
+                    I build
+                    <span id="two">practical software projects</span>
+                </h1>
+
+                <p class="hero-description">
+                    B.Tech student passionate about Java, Python,
+                    backend development, databases and problem solving.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#portfolio" class="btn">
+                        View My Work
+                    </a>
+
+                    <a href="#contact" class="btn btn-outline">
+                        Contact Me
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="about-col-1">
+
+                    <img src="about.jpg" alt="Sahil Suthar" loading="lazy">
+
+                </div>
+
+
+                <div class="about-col-2">
+
+                    <h2 class="sub-title">About Me</h2>
+
+                    <p>
+                        I'm Sahil Suthar, a B.Tech student interested in
+                        software development and backend technologies.
+                        I enjoy building practical projects and learning
+                        how different technologies work together.
+                    </p>
+
+                    <div class="tab-titles">
+
+                        <button class="tab-links active-link" onclick="opentab('skills', this)">
+                            Skills
+                        </button>
+
+                        <button class="tab-links" onclick="opentab('experience', this)">
+                            Focus
+                        </button>
+
+                        <button class="tab-links" onclick="opentab('education', this)">
+                            Education
+                        </button>
+
+                    </div>
+
+
+                    <!-- Skills -->
+
+                    <div class="tab-content active-tab" id="skills">
+
+                        <ul>
+
+                            <li>
+                                <span>Programming</span>
+                                <br>
+                                Java, Python, C
+                            </li>
+
+                            <li>
+                                <span>Backend & Database</span>
+                                <br>
+                                JDBC, Flask, MySQL, SQL
+                            </li>
+
+                            <li>
+                                <span>Development</span>
+                                <br>
+                                HTML, CSS, JavaScript, Git & GitHub
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <!-- Focus -->
+
+                    <div class="tab-content" id="experience">
+
+                        <ul>
+
+                            <li>
+                                <span>Current Focus</span>
+                                <br>
+                                Java and Data Structures & Algorithms
+                            </li>
+
+                            <li>
+                                <span>Backend</span>
+                                <br>
+                                JDBC, MySQL and REST API development
+                            </li>
+
+                            <li>
+                                <span>Next Goal</span>
+                                <br>
+                                Learning Spring Boot and building REST APIs
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <!-- Education -->
+
+                    <div class="tab-content" id="education">
+
+                        <ul>
+
+                            <li>
+                                <span>Degree</span>
+                                <br>
+                                B.Tech in Information Technology
+                            </li>
+
+                            <li>
+                                <span>University</span>
+                                <br>
+                                Gandhinagar University
+                            </li>
+
+                            <li>
+                                <span>Graduation</span>
+                                <br>
+                                Expected 2028
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SKILLS / SERVICES ================= -->
+
+    <section id="services">
+
+        <div class="container">
+
+            <h2 class="sub-title">What I Work With</h2>
+
+            <div class="services-list">
+
+
+                <div class="service-card">
+
+                    <i class="fa-brands fa-java"></i>
+
+                    <h3>Java Development</h3>
+
+                    <p>
+                        Object-oriented programming, JDBC,
+                        exception handling and database-driven
+                        applications.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <i class="fa-brands fa-python"></i>
+
+                    <h3>Python Development</h3>
+
+                    <p>
+                        Python applications using Flask,
+                        PyQt5, OpenCV, MediaPipe and data
+                        analysis libraries.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <i class="fa-solid fa-database"></i>
+
+                    <h3>Database & Backend</h3>
+
+                    <p>
+                        MySQL, SQL, CRUD operations,
+                        JDBC connectivity and REST API
+                        fundamentals.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PROJECTS ================= -->
+
+    <section id="portfolio">
+
+        <div class="container">
+
+            <h2 class="sub-title">My Projects</h2>
+
+            <p class="section-description">
+                Some of the projects I have built while learning
+                programming and software development.
+            </p>
+
+
+            <div class="work-list">
+
+
+                <!-- Bank Management -->
+
+                <article class="work">
+
+                    <img src="Bms.png" alt="Bank Management System" loading="lazy">
+
+                    <div class="layer">
+
+                        <span class="project-tech">
+                            Java • JDBC • MySQL
+                        </span>
+
+                        <h3>Bank Management System</h3>
+
+                        <p>
+                            Console-based banking application with
+                            account management, deposits, withdrawals,
+                            transfers and transaction history.
+                        </p>
+
+                        <a href="https://github.com/Sahilsthr/Bank-Management-System" target="_blank"
+                            rel="noopener noreferrer" title="View Bank Management System on GitHub">
+
+                            <i class="fa-brands fa-github"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Hand Gesture -->
+
+                <article class="work">
+
+                    <img src="gesture.jpeg" alt="Hand Gesture Volume Control" loading="lazy">
+
+                    <div class="layer">
+
+                        <span class="project-tech">
+                            Python • OpenCV • MediaPipe
+                        </span>
+
+                        <h3>Hand Gesture Volume Control</h3>
+
+                        <p>
+                            Real-time computer vision project that
+                            uses hand gestures to control system volume.
+                        </p>
+
+                        <a href="https://github.com/Sahilsthr" target="_blank" rel="noopener noreferrer"
+                            title="View project on GitHub">
+
+                            <i class="fa-brands fa-github"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Weather -->
+
+                <article class="work">
+
+                    <img src="weather.png" alt="Weather Application" loading="lazy">
+
+                    <div class="layer">
+
+                        <span class="project-tech">
+                            Python • Flask • REST API
+                        </span>
+
+                        <h3>Weather Application</h3>
+
+                        <p>
+                            Weather application built with Python
+                            and Flask using API-based weather data.
+                        </p>
+
+                        <a href="https://github.com/Sahilsthr" target="_blank" rel="noopener noreferrer"
+                            title="View project on GitHub">
+
+                            <i class="fa-brands fa-github"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+            <a href="https://github.com/Sahilsthr" target="_blank" rel="noopener noreferrer" class="btn">
+
+                More Projects
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact">
+
+        <div class="container">
+
+            <div class="row">
+
+
+                <div class="contact-left">
+
+                    <h2 class="sub-title">Contact Me</h2>
+
+                    <p>
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <a href="mailto:sahilsuthar.238@gmail.com">
+                            sahilsuthar.238@gmail.com
+                        </a>
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:+919414843616">
+                            +91 9414843616
+                        </a>
+                    </p>
+
+
+                    <div class="social-icons">
+
+                        <a href="https://www.linkedin.com/in/sahilsuthar4/" target="_blank" rel="noopener noreferrer"
+                            aria-label="LinkedIn">
+
+                            <i class="fa-brands fa-linkedin"></i>
+
+                        </a>
+
+
+                        <a href="https://github.com/Sahilsthr" target="_blank" rel="noopener noreferrer"
+                            aria-label="GitHub">
+
+                            <i class="fa-brands fa-github"></i>
+
+                        </a>
+
+                    </div>
+
+
+                    <a href="Sahilsthar_Resume.pdf" download class="btn btn2">
+
+                        Download Resume
+
+                    </a>
+
+                </div>
+
+
+                <div class="contact-right">
+
+                    <form name="submit-to-google-sheet">
+
+                        <input type="text" name="Name" placeholder="Your Name" autocomplete="name" required>
+
+                        <input type="email" name="Email" placeholder="Your Email" autocomplete="email" required>
+
+                        <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+
+                        <button type="submit" class="btn btn2">
+
+                            Send Message
+
+                        </button>
+
+                    </form>
+
+                    <span id="msg"></span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            <p>
+                © 2026 Sahil Suthar. Built with HTML, CSS & JavaScript.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- JavaScript -->
+
+    <script src="portf.js"></script>
+
+</body>
+
+</html>
