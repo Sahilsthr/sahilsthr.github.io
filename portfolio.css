@@ -1,0 +1,866 @@
+/* =========================================================
+   SAHIL SUTHAR - PORTFOLIO
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+button {
+    border: none;
+}
+
+a {
+    color: inherit;
+}
+
+
+/* =========================================================
+   COMMON
+   ========================================================= */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 40px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.sub-title {
+    font-size: clamp(38px, 5vw, 60px);
+    line-height: 1.1;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.section-description {
+    max-width: 700px;
+    color: #b8b8b8;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+#header {
+    min-height: 100vh;
+    background-image:
+        linear-gradient(90deg,
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.15)),
+        url("Black White Grayscale Portfolio Presentation.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+nav {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo-link {
+    display: inline-block;
+}
+
+.logo {
+    width: 130px;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    list-style: none;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #111;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff004f;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #ff004f;
+    left: 0;
+    bottom: -7px;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.menu-btn,
+.close-btn {
+    background: transparent;
+    cursor: pointer;
+}
+
+.menu-btn {
+    display: none;
+    color: #111;
+    font-size: 28px;
+}
+
+.mobile-close {
+    display: none;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.header-text {
+    max-width: 800px;
+    margin-top: 20vh;
+}
+
+.header-text>p:first-child {
+    color: #ff004f;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.header-text h1 {
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.15;
+    font-weight: 600;
+}
+
+.header-text h1 span {
+    color: #ff004f;
+}
+
+.header-text h1 #two {
+    color: #fff;
+}
+
+.hero-description {
+    max-width: 650px;
+    margin-top: 25px;
+    color: #d0d0d0;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.btn {
+    display: inline-block;
+    width: fit-content;
+    padding: 13px 32px;
+    border: 1px solid #ff004f;
+    border-radius: 6px;
+    background: #ff004f;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+.btn:hover {
+    background: #d90044;
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: #ff004f;
+}
+
+.btn2 {
+    margin-top: 30px;
+}
+
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
+
+#about {
+    padding: 100px 0;
+}
+
+.about-col-1 {
+    flex-basis: 35%;
+}
+
+.about-col-1 img {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+.about-col-2 {
+    flex-basis: 60%;
+}
+
+.about-col-2>p {
+    color: #c6c6c6;
+    line-height: 1.8;
+    font-size: 16px;
+    max-width: 700px;
+}
+
+.tab-titles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin: 35px 0 25px;
+}
+
+.tab-links {
+    position: relative;
+    background: transparent;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0 0 8px;
+}
+
+.tab-links::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #ff004f;
+    transition: width 0.3s ease;
+}
+
+.tab-links.active-link::after {
+    width: 100%;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active-tab {
+    display: block;
+}
+
+.tab-content ul {
+    list-style: none;
+}
+
+.tab-content ul li {
+    margin: 18px 0;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+.tab-content ul li span {
+    color: #ff004f;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   SERVICES / SKILLS
+   ========================================================= */
+
+#services {
+    padding: 80px 0;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 45px;
+}
+
+.service-card {
+    background: #191919;
+    padding: 40px 30px;
+    border-radius: 14px;
+    border: 1px solid #292929;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: #ff004f;
+    background: #202020;
+}
+
+.service-card i {
+    font-size: 48px;
+    color: #ff004f;
+    margin-bottom: 25px;
+}
+
+.service-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #bcbcbc;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   PROJECTS
+   ========================================================= */
+
+#portfolio {
+    padding: 100px 0;
+}
+
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 45px;
+}
+
+.work {
+    position: relative;
+    min-height: 420px;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #151515;
+}
+
+.work img {
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.layer {
+    position: absolute;
+    inset: 0;
+    padding: 35px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+    background: linear-gradient(rgba(0, 0, 0, 0.35),
+            rgba(255, 0, 79, 0.95));
+
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+}
+
+.work:hover img {
+    transform: scale(1.08);
+}
+
+.work:hover .layer {
+    transform: translateY(0);
+}
+
+.project-tech {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.layer h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.layer p {
+    font-size: 14px;
+    line-height: 1.7;
+    max-width: 320px;
+}
+
+.layer a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 55px;
+    height: 55px;
+    margin-top: 25px;
+
+    border-radius: 50%;
+    background: #fff;
+    color: #ff004f;
+
+    text-decoration: none;
+    font-size: 24px;
+
+    transition: transform 0.3s ease;
+}
+
+.layer a:hover {
+    transform: scale(1.1);
+}
+
+#portfolio>.container>.btn {
+    margin: 50px auto 0;
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+#contact {
+    padding-top: 80px;
+}
+
+.contact-left {
+    flex-basis: 35%;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+.contact-left p {
+    margin: 25px 0;
+    color: #ccc;
+}
+
+.contact-left p i {
+    width: 25px;
+    margin-right: 12px;
+    color: #ff004f;
+    font-size: 20px;
+}
+
+.contact-left p a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-left p a:hover {
+    color: #ff004f;
+}
+
+.social-icons {
+    display: flex;
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.social-icons a {
+    color: #aaa;
+    font-size: 30px;
+    text-decoration: none;
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+
+.contact-right form {
+    width: 100%;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: 1px solid #292929;
+    outline: none;
+    background: #181818;
+    color: #fff;
+    padding: 16px;
+    margin: 10px 0;
+    border-radius: 7px;
+    font-size: 15px;
+    resize: vertical;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #ff004f;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: #777;
+}
+
+form .btn2 {
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+#msg {
+    display: block;
+    margin-top: 18px;
+    color: #61b752;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.copyright {
+    margin-top: 80px;
+    padding: 25px 20px;
+    background: #151515;
+    text-align: center;
+    color: #888;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .container {
+        padding: 0 30px;
+    }
+
+    #header {
+        min-height: 90vh;
+    }
+
+    .header-text {
+        margin-top: 15vh;
+    }
+
+    .about-col-1 {
+        flex-basis: 38%;
+    }
+
+    .about-col-2 {
+        flex-basis: 57%;
+    }
+
+    .services-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .work-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-left,
+    .contact-right {
+        flex-basis: 100%;
+    }
+
+    .contact-right {
+        margin-top: 50px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .container {
+        padding: 0 20px;
+    }
+
+    #header {
+        min-height: 100vh;
+        background-image:
+            linear-gradient(rgba(0, 0, 0, 0.4),
+                rgba(0, 0, 0, 0.7)),
+            url("Untitled design.jpg");
+
+        background-position: center;
+    }
+
+    nav {
+        min-height: 70px;
+    }
+
+    .logo {
+        width: 105px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: min(280px, 80%);
+        height: 100vh;
+
+        padding: 80px 30px 30px;
+
+        background: #fff;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+
+        z-index: 1000;
+
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
+
+        transition: right 0.35s ease;
+    }
+
+    nav ul.active {
+        right: 0;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li a {
+        color: #111;
+        font-size: 17px;
+    }
+
+    .mobile-close {
+        display: block;
+        position: absolute;
+        top: 22px;
+        right: 25px;
+    }
+
+    .close-btn {
+        display: block;
+        color: #111;
+        font-size: 28px;
+    }
+
+    .header-text {
+        margin-top: 25vh;
+    }
+
+    .header-text>p:first-child {
+        font-size: 14px;
+        letter-spacing: 1.5px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        margin-top: 25px;
+    }
+
+    .btn {
+        padding: 12px 24px;
+    }
+
+    #about,
+    #portfolio {
+        padding: 75px 0;
+    }
+
+    #services {
+        padding: 60px 0;
+    }
+
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 100%;
+    }
+
+    .about-col-1 {
+        margin-bottom: 40px;
+    }
+
+    .about-col-1 img {
+        max-width: 350px;
+    }
+
+    .about-col-2>p {
+        text-align: left;
+    }
+
+    .tab-titles {
+        gap: 25px;
+    }
+
+    .services-list,
+    .work-list {
+        grid-template-columns: 1fr;
+    }
+
+    .work {
+        min-height: 380px;
+    }
+
+    .work img {
+        min-height: 380px;
+    }
+
+    .layer {
+        transform: translateY(0);
+        justify-content: flex-end;
+        padding-bottom: 30px;
+
+        background: linear-gradient(transparent,
+                rgba(255, 0, 79, 0.95));
+    }
+
+    .contact-left,
+    .contact-right {
+        flex-basis: 100%;
+    }
+
+    .contact-right {
+        margin-top: 30px;
+    }
+
+    .copyright {
+        margin-top: 60px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .header-text {
+        margin-top: 22vh;
+    }
+
+    .header-text h1 {
+        font-size: 38px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tab-titles {
+        gap: 18px;
+    }
+
+    .tab-links {
+        font-size: 15px;
+    }
+
+    .service-card {
+        padding: 30px 22px;
+    }
+
+    .work {
+        min-height: 350px;
+    }
+
+    .work img {
+        min-height: 350px;
+    }
+
+    form .btn2 {
+        width: 100%;
+    }
+}
